@@ -85,7 +85,7 @@ include ($_SERVER['DOCUMENT_ROOT']."/menu.php");
         </tr>
         <tr>
                 <td>Project</td>
-           <td><select name="project"><option value="<?php echo $project; ?>"><?php echo $project; ?></option><option value='P2.2'>P2.2</option><option value='PH_1'>PH_1</option><option value='PH_2'>PH_2</option><option value='STL_L1'>STL_L1</option><option value='STL_L3'>STL_L3</option><option value='RUR'>RURAL</option><option value='ZTE_L2'>ZTE_L2</option></select></td --!>
+          
                 <td><select name="project"><option value="<?php echo $project; ?>"><?php echo $project; ?></option><option value='UTS-P1'>UTS-P1</option><option value='UTS-GENEW-P1'>UTS-GENEW-P1</option><option value='UTS-GENEW-P2'>UTS-GENEW-P2</option><option value='LCO'>LCO</option></select></td>
         </tr>
 
