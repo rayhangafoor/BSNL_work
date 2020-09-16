@@ -23,10 +23,9 @@ if(isset($_POST['save']))
         $location_save = $_POST['location'];
         $project_save = $_POST['project'];
         $vendor_save = $_POST['vendor'];
-        //$capacity_save = $_POST['capacity'];
+       
         $bng_save = $_POST['bng'];
-        //$ring_save = $_POST['ring'];
-        //$bng_port_save = $_POST['bng_port'];
+        
         $parent_switch_save = $_POST['parent_switch'];
         $switch_type_save = $_POST['switch_type'];
         $switch_port_save = $_POST['switch_port'];
@@ -36,16 +35,14 @@ if(isset($_POST['save']))
         $doi_save = $_POST['doi'];
         $status_save = $_POST['status'];
         $fiber_details_save = mysql_real_escape_string($_POST['fiber_details']);
-        //$contact_no_save = $_POST['contact_no'];
-
+       
  $user = $_SESSION['username'];
         $user_ip = $_SESSION['user_ip'];
         $act = "NEW_OLT";
         $remark = "NEW OLT INSTALLED AT ".$lco_code_save." ON ".$doi_save;
 
         mysql_query("INSERT INTO olt_koz (eqp_desc,lco_code,location,project,vendor, bng, parent_switch, switch_type,switch_port,olt_ip,o_vlan,nw,status,fiber_details,doi) VALUES ('OLT','$lco_code_save','$location_save','$project_save','$vendor_save','$bng_save','$parent_switch_save','$switch_type_save','$switch_port_save','$olt_ip_save','$o_vlan_save','$nw_save','$status_save','$fiber_details_save','$doi_save')") or die(mysql_error());
-        #mysql_query("insert into log_book (user,user_ip,olt,activity,remarks) values ('$user','$user_ip','$olt_ip_save','$act','$remark')")
-                        #or die(mysql_error());
+    
         header("Location: list.php?exch=$lco_code_save&submit=submit");
 
 
@@ -67,18 +64,7 @@ include ($_SERVER['DOCUMENT_ROOT']."/menu.php");
                         useMode:2,
                         target:"inputField",
                         dateFormat:"%Y-%m-%d"
-                        /*selectedDate:{                                This is an example of what the full configuration offers.
-                                day:5,                                          For full documentation about these settings please see the full version of the code.
-                                month:9,
-                                year:2006
-                        },
-                        yearsRange:[1978,2020],
-                        limitToToday:false,
-                        cellColorScheme:"beige",
-
- dateFormat:"%m-%d-%Y",
-                        imgPath:"img/",
-                        weekStartDay:1*/
+                 
                 });
         };
 </script>
